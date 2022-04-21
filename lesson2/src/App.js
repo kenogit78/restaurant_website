@@ -1,46 +1,33 @@
 
 import './App.css';
+import Navbar from './components/Navbar/Navbar';
+import Home from './components/Home/Home'
+import About from './components/About/About';
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Routes,
   Route,
-  Link
-} from 'react-router-dom';
-
-import Home from './components/Home';
-import About from './components/About';
-import Contact from './components/Contact';
+} from "react-router-dom";
+import CreatePlan from './components/CreatePlan/CreatePlan';
 
 
 
 function App() {
   return (
 
-    <Router>
+   <div>
+     <BrowserRouter>
+      <Navbar />
 
-<div className="App">
-    <ul>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/about">About Us</Link>
-      </li>
-      <li>
-        <Link to="/contact">Contact Us</Link>
-      </li>
-    </ul>
-</div>
- 
- <Routes>
+     <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/createplan" element={<CreatePlan />} />
+     </Routes>
 
-      <Route exact path='/' element={< Home />}></Route>
-      <Route exact path='/about' element={< About />}></Route>
-      <Route exact path='/contact' element={< Contact />}></Route>
-
- </Routes>
-
-    </Router>
+     </BrowserRouter>
+     
+   </div>
   );
 }
 
