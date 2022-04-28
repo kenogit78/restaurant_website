@@ -2,7 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1em;
+    padding: 1em;
+    background: orangered;
+    color: white;
 }
 
 .navbar .nav-links{
@@ -13,4 +15,9 @@
     margin: 10px;
     list-style: none;
     text-transform: uppercase;
+}
+.navbar .nav-links li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
 }
